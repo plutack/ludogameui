@@ -1,0 +1,167 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.ludo {
+  width: 100vh;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: auto;
+}
+
+.ludo > * {
+  display: flex;
+}
+
+.ludo .home {
+  width: 40vh;
+  height: 40vh;
+  border: 1px solid black;
+}
+
+.home player {
+  padding: 0;
+}
+
+.lane-box.vertical {
+  width: 20vh;
+  height: 40vh;
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  border: 1px solid black;
+}
+.lane-box.horizontal {
+  width: 40vh;
+  height: 20vh;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(6, 1fr);
+  border: 1px solid black;
+}
+
+.lane {
+  width: 100%;
+  height: 100%;
+  border: 1px solid black;
+}
+
+#red > .lane:nth-child(3n + 5),
+#red > .lane:nth-child(6) {
+  background-color: red;
+}
+
+#red i {
+  color: red;
+}
+
+.red .player {
+  background-color: red;
+}
+
+#yellow > .lane:nth-child(3n + 2):nth-child(-n + 15),
+#yellow > .lane:nth-child(13) {
+  background-color: yellow;
+}
+
+#yellow i {
+  color: yellow;
+}
+
+.yellow .player {
+  background-color: yellow;
+}
+
+#green > .lane:nth-child(n + 8):nth-child(-n + 12),
+#green > .lane:nth-child(2) {
+  background-color: green;
+}
+
+#green i {
+  color: green;
+}
+
+.green .player {
+  background-color: green;
+}
+#blue > .lane:nth-child(n + 7):nth-child(-n + 11),
+#blue > .lane:nth-child(17) {
+  background-color: blue;
+}
+
+#blue i {
+  color: blue;
+}
+
+.blue .player {
+  background-color: blue;
+}
+
+.center {
+  width: 0;
+  height: 0;
+  border-top: 10vh solid red;
+  border-right: 10vh solid blue;
+  border-bottom: 10vh solid yellow;
+  border-left: 10vh solid green;
+}
+
+.lane {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.top {
+  border: none;
+}
+
+.home.green {
+  border-top-left-radius: 10px;
+  background-color: green;
+}
+.home.red {
+  border-top-right-radius: 10px;
+  background-color: red;
+}
+.home.yellow {
+  border-bottom-left-radius: 10px;
+  background-color: yellow;
+}
+.home.blue {
+  border-bottom-right-radius: 10px;
+  background-color: blue;
+}
+
+.space {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  width: 70%;
+  height: 70%;
+  background-color: white;
+  border-radius: 25px;
+  border: 2px solid black;
+}
+
+
+.player {
+  width: 40%;
+  height: 40%;
+  border-radius: 50%;
+  background-color: black;
+  align-self: center;
+  justify-self: center;
+}
